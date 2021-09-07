@@ -1,0 +1,81 @@
+
+@media screen and (max-width:1150px) {
+    .container{
+        width: 85% !important;
+    }
+}
+@media screen and (max-width:950px) {
+    nav .container .nav-bar{
+        flex-direction: column;
+    }
+    .section__width{
+        min-height: 500px !important;
+        height: auto !important;
+    }
+    .about .container{
+        grid-template-columns: 1fr !important;
+
+    }
+    ul li{
+        line-height: 1.5 !important;
+        &:last-child{
+            padding-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about__right{
+        grid-template-columns: 1fr !important;
+    }
+    .galary{
+        .container{
+            grid-template-columns: 1fr !important;
+        }
+    }
+    .years__image{
+        width: 80% !important;
+    }
+
+    form{
+        width: 80% !important;
+    }
+
+
+
+    label #btn{
+        display: inline-block !important;
+    }
+    .nav-bar ul{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background-color: #00000098;
+        padding-top: 80px;
+        display: block !important;
+        line-height: 40px;
+        z-index: 100;
+        transition: 0.5s;
+    }
+    .nav-bar ul li{
+        margin-left: 50px;
+    }
+    .nav-bar ul li a{
+        color: #fff;
+    }
+    #check:checked ~ ul{
+        right: 0;
+    }
+    #check:checked ~ label #btn{   
+        display: none !important;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+        z-index: 101;
+        color: #fff;
+        
+    }
+
+}
